@@ -79,3 +79,4 @@ venv.bak/
 
 # MacOS
 .DS_Store
+test.py

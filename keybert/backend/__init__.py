@@ -1,3 +1,3 @@
-from ._base import BaseEmbedder
+from ._hf_api import HfApiEmbeddingModel
 
-__all__ = ["BaseEmbedder"]
+__all__ = ["HfApiEmbeddingModel"]

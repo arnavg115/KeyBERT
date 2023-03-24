@@ -36,7 +36,7 @@ class KeyBERT:
     </div>
     """
 
-    def __init__(self, model="all-MiniLM-L6-v2"):
+    def __init__(self,key, multilingual= False):
         """KeyBERT initialization
 
         Arguments:
@@ -52,7 +52,7 @@ class KeyBERT:
                     sentence-transformers models:
                       * https://www.sbert.net/docs/pretrained_models.html
         """
-        self.model = select_backend(model)
+        self.model = select_backend(multilingual,key)
 
     def extract_keywords(
         self,

@@ -14,9 +14,8 @@ class BaseEmbedder:
                               creating document embeddings.
     """
 
-    def __init__(self, embedding_model=None, word_embedding_model=None):
+    def __init__(self, multilingual=False, key: str= ""):
         self.embedding_model = embedding_model
-        self.word_embedding_model = word_embedding_model
 
     def embed(self, documents: List[str], verbose: bool = False) -> np.ndarray:
         """Embed a list of n documents/words into an n-dimensional

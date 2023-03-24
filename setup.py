@@ -1,35 +1,10 @@
 from setuptools import setup, find_packages
-
-test_packages = [
-    "pytest>=5.4.3",
-    "pytest-cov>=2.6.1",
-    "flake8>=3.6.0",
-    "pre-commit>=2.2.0",
-    "black>=19.3b0",
-]
-
 base_packages = [
-    "sentence-transformers>=0.3.8",
     "scikit-learn>=0.22.2",
     "numpy>=1.18.5",
     "rich>=10.4.0",
+    "requests"
 ]
-
-docs_packages = [
-    "mkdocs>=1.1",
-    "mkdocs-material>=4.6.3",
-    "mkdocstrings>=0.8.0",
-]
-
-flair_packages = ["transformers>=3.5.1", "torch>=1.4.0", "flair>=0.7"]
-
-spacy_packages = ["spacy>=3.0.1"]
-
-use_packages = ["tensorflow", "tensorflow_hub", "tensorflow_text"]
-
-gensim_packages = ["gensim>=3.6.0"]
-
-dev_packages = docs_packages + test_packages
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -61,14 +36,5 @@ setup(
         "Programming Language :: Python :: 3.8",
     ],
     install_requires=base_packages,
-    extras_require={
-        "test": test_packages,
-        "docs": docs_packages,
-        "dev": dev_packages,
-        "flair": flair_packages,
-        "spacy": spacy_packages,
-        "use": use_packages,
-        "gensim": gensim_packages,
-    },
     python_requires=">=3.6",
 )
