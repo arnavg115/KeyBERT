@@ -15,6 +15,5 @@ class HfApiEmbeddingModel:
         API_URL = f"https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/{self.model_name}"
         data = json.dumps({"inputs": list(documents)})
         response = requests.request("POST", API_URL, headers=headers, data=data)
-        print(response.content.decode("utf-8"))
         return np.array(json.loads(response.content.decode("utf-8")))
 
